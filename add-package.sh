@@ -9,6 +9,6 @@ if [ -z "$PACKAGE_NAME" ]; then
     exit 1
 fi
 
-git remote add $PACKAGE_NAME ssh://aur@aur.archlinux.org/$PACKAGE_NAME.git
+git submodule add ssh://aur@aur.archlinux.org/$PACKAGE_NAME.git $PACKAGE_NAME
 
-git subtree add --prefix $PACKAGE_NAME $PACKAGE_NAME master --no-squash
+# git submodule update --init --recursive
