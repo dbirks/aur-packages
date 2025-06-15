@@ -1,0 +1,16 @@
+{
+  "git-submodules": {
+    "enabled": true
+  },
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "(^|/)PKGBUILD$"
+      ],
+      "matchStrings": [
+        "pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+      ],
+      "extractVersionTemplate": "^v?(?<version>.*)$"
+    }
+  ]
+}
