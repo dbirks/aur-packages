@@ -2,14 +2,19 @@
   "git-submodules": {
     "enabled": true
   },
+  "postCheckoutCommands": [
+    "git submodule update --init --recursive"
+  ],
   "regexManagers": [
     {
       "fileMatch": [
         "(^|/)PKGBUILD$"
       ],
       "matchStrings": [
-        "pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+        "pkgver=(?<currentValue>[^\\s]+) # renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+)"
       ],
+      "datasourceTemplate": "{{ datasource }}",
+      "depNameTemplate": "{{ depName }}",
       "extractVersionTemplate": "^v?(?<version>.*)$"
     }
   ],
