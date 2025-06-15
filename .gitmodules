@@ -1,0 +1,15 @@
+[submodule "goose-desktop"]
+	path = goose-desktop
+	url = ssh://aur@aur.archlinux.org/goose-desktop.git
+[submodule "somo"]
+	path = somo
+	url = ssh://aur@aur.archlinux.org/somo.git
+[submodule "mcptools"]
+	path = mcptools
+	url = ssh://aur@aur.archlinux.org/mcptools.git
+[submodule "clair"]
+	path = clair
+	url = ssh://aur@aur.archlinux.org/clair.git
+[submodule "kubetail"]
+	path = kubetail
+	url = ssh://aur@aur.archlinux.org/kubetail.git
