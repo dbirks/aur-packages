@@ -14,7 +14,7 @@ on:
       LOG_LEVEL:
         description: The log level to run Renovate at
         required: false
-        default: info
+        default: debug
         type: choice
         options:
           - debug
