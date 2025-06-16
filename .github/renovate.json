@@ -2,6 +2,10 @@
   "git-submodules": {
     "enabled": true
   },
+  "cloneSubmodules": true,
+  "cloneSubmodulesFilter": [
+    "*"
+  ],
   "regexManagers": [
     {
       "fileMatch": [
