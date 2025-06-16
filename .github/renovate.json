@@ -2,9 +2,6 @@
   "git-submodules": {
     "enabled": true
   },
-  "postCheckoutCommands": [
-    "git submodule update --init --recursive"
-  ],
   "regexManagers": [
     {
       "fileMatch": [

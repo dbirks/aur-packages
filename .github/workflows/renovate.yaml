@@ -1,0 +1,27 @@
+name: Renovate
+on:
+  # At every 23rd minute Monday through Saturday
+  # https://crontab.guru/#*/23_*_*_*_1-6
+  schedule:
+    - cron: "*/23 * * * 1-6"
+  # On any push to main
+  push:
+    branches:
+      - main
+  # Allow manual triggering if needed
+  workflow_dispatch:
+
+jobs:
+  renovate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+      - name: Run Renovate
+        uses: renovatebot/github-action@v42.0.4
+        with:
+          token: ${{ secrets.RENOVATE_TOKEN }}
+          configurationFile: .github/renovate.json
