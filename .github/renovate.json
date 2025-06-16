@@ -9,7 +9,7 @@
       "customType": "regex",
       "fileMatch": ["test-PKGBUILD"],
       "matchStrings": [
-        "^pkgver=(?<currentValue>\\S+)\\s*#\\s*renovate:\\s*datasource=(?<datasource>\\S+)\\s+depName=(?<depName>\\S+)"
+        "^pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)$"
       ],
       "extractVersionTemplate": "^v?(?<version>.*)$",
       "datasourceTemplate": "{{datasource}}",
