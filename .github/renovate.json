@@ -6,9 +6,10 @@
   "cloneSubmodulesFilter": [
     "*"
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": [
+      "customType": "regex",
+      "managerFilePatterns": [
         "(^|/)PKGBUILD$"
       ],
       "matchStrings": [
