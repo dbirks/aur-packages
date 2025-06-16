@@ -3,14 +3,11 @@
     "enabled": true
   },
   "cloneSubmodules": true,
-  "cloneSubmodulesFilter": [
-    "*"
-  ],
-  "regexManagers": [
+  "cloneSubmodulesFilter": ["*"],
+  "customManagers": [
     {
-      "fileMatch": [
-        "(^|/)PKGBUILD$"
-      ],
+      "customType": "regex",
+      "fileMatch": ["test-PKGBUILD"],
       "matchStrings": [
         "^pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)$"
       ],
