@@ -11,6 +11,15 @@ on:
   # Allow manual triggering if needed
   workflow_dispatch:
 
+inputs:
+  LOG_LEVEL:
+    description: The log level to run Renovate at
+    required: false
+    default: INFO
+    choices:
+      - DEBUG
+      - INFO
+
 jobs:
   renovate:
     runs-on: ubuntu-latest
@@ -29,3 +38,4 @@ jobs:
           RENOVATE_AUTODISCOVER: "true"
           RENOVATE_AUTODISCOVER_FILTER: "dbirks/aur-packages"
           RENOVATE_CLONE_SUBMODULES: "true"
+          LOG_LEVEL: ${{ inputs.LOG_LEVEL }}
