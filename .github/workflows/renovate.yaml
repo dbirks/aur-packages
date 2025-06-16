@@ -15,10 +15,10 @@ inputs:
   LOG_LEVEL:
     description: The log level to run Renovate at
     required: false
-    default: INFO
+    default: info
     choices:
-      - DEBUG
-      - INFO
+      - debug
+      - info
 
 jobs:
   renovate:
