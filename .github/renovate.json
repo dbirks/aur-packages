@@ -6,10 +6,11 @@
   "cloneSubmodulesFilter": [
     "*"
   ],
-  "regexManagers": [
+  "customManagers": [
     {
-      "fileMatch": [
-        "(^|/)PKGBUILD$"
+      "customType": "regex",
+      "managerFilePatterns": [
+        "/(^|/)PKGBUILD$/"
       ],
       "matchStrings": [
         "pkgver=(?<currentValue>[^\\s]+) # renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+)"
