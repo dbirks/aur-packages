@@ -28,3 +28,4 @@ jobs:
         env:
           RENOVATE_AUTODISCOVER: "true"
           RENOVATE_AUTODISCOVER_FILTER: "dbirks/aur-packages"
+          RENOVATE_CLONE_SUBMODULES: "true"
