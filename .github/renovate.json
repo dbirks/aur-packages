@@ -1,7 +1,4 @@
 {
-  "repositories": [
-    "dbirks/aur-packages"
-  ],
   "git-submodules": {
     "enabled": true
   },
