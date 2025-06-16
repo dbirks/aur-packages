@@ -10,15 +10,6 @@ on:
       - main
   # Allow manual triggering if needed
   workflow_dispatch:
-    inputs:
-      LOG_LEVEL:
-        description: The log level to run Renovate at
-        required: false
-        default: debug
-        type: choice
-        options:
-          - debug
-          - info
 
 jobs:
   renovate:
@@ -38,4 +29,4 @@ jobs:
           RENOVATE_AUTODISCOVER: "true"
           RENOVATE_AUTODISCOVER_FILTER: "dbirks/aur-packages"
           RENOVATE_CLONE_SUBMODULES: "true"
-          LOG_LEVEL: ${{ github.event.inputs.LOG_LEVEL }}
+          LOG_LEVEL: debug
