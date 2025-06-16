@@ -6,17 +6,14 @@
   "cloneSubmodulesFilter": [
     "*"
   ],
-  "customManagers": [
+  "regexManagers": [
     {
-      "customType": "regex",
-      "managerFilePatterns": [
-        "/(^|/)PKGBUILD$/"
+      "fileMatch": [
+        "(^|/)PKGBUILD$"
       ],
       "matchStrings": [
-        "pkgver=(?<currentValue>[^\\s]+) # renovate: datasource=(?<datasource>[^\\s]+) depName=(?<depName>[^\\s]+)"
+        "pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
       ],
-      "datasourceTemplate": "{{ datasource }}",
-      "depNameTemplate": "{{ depName }}",
       "extractVersionTemplate": "^v?(?<version>.*)$"
     }
   ],
